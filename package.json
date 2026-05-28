@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "capture": "node capture-clean-newsstand.js"
+  },
+  "dependencies": {
+    "playwright": "^1.44.0",
+    "sharp": "^0.33.4"
+  }
+}
