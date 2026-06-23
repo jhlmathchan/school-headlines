@@ -159,9 +159,19 @@ async function main() {
     allHeadlines.push(...result.headlines);
   }
 
-  await browser.close();
   await updateHtmlTimes(times);
   await updateHtmlKeywords(allHeadlines);
+
+  // 완성된 화면을 board.png 단일 이미지로 렌더 (Y-board 등 사이니지용 — URL 하나만 등록하면 매일 자동 갱신)
+  try {
+    const boardPage = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+    await boardPage.goto(`file://${htmlPath}`, { waitUntil: "networkidle", timeout: 30000 });
+    await boardPage.screenshot({ path: path.join(root, "board.png") });
+  } catch (error) {
+    console.log(`board image failed: ${error.message}`);
+  }
+
+  await browser.close();
 }
 
 main().catch((error) => {
