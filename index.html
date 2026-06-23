@@ -5,34 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="600">
   <title>2026년 5월 28일 헤드라인 모음</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
-    html, body { height: 100%; margin: 0; padding: 0; background: #2b2b2b; color: #1a1a1a; font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; overflow: hidden; }
-    .page { display: flex; flex-direction: column; height: 100vh; box-sizing: border-box; padding: 6px; background: #f4f1ea; }
-    .header { flex: 0 0 auto; display: flex; justify-content: space-between; align-items: baseline; gap: 14px; border-bottom: 3px solid #111; padding-bottom: 5px; margin-bottom: 6px; }
-    h1 { margin: 0; font-size: 22px; line-height: 1.1; font-weight: 900; letter-spacing: -1px; color: #111; white-space: nowrap; }
-    .kw { font-size: 12px; font-weight: 500; line-height: 1.3; color: #222; text-align: right; }
-    .kw b { background: #111; color: #f4f1ea; padding: 2px 9px; margin-right: 7px; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
-    .papers { flex: 1 1 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6px; min-height: 0; }
-    .paper { border: 1px solid #111; background: #fff; overflow: hidden; display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 0; }
-    .paper img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    html, body { height: 100%; margin: 0; padding: 0; background: #2b2b2b;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Dotum, sans-serif; color: #1a1a1a; }
+    table.screen { width: 100%; height: 100%; border-collapse: collapse; table-layout: fixed; background: #f4f1ea; }
+    td.hdr { height: 1px; padding: 6px 10px; border-bottom: 3px solid #111; white-space: nowrap; overflow: hidden; }
+    td.hdr h1 { display: inline; margin: 0; font-size: 22px; font-weight: bold; letter-spacing: -1px; color: #111; }
+    td.hdr .kw { float: right; font-size: 12px; color: #222; padding-top: 5px; }
+    td.hdr .kw b { background: #111; color: #f4f1ea; padding: 2px 9px; margin-right: 7px; font-size: 11px; }
+    td.cell { width: 50%; height: 50%; text-align: center; vertical-align: middle;
+      background: #fff; border: 4px solid #f4f1ea; overflow: hidden; }
+    td.cell img { max-width: 100%; max-height: 100%; border: 1px solid #111; }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="header">
-      <h1>2026년 5월 28일 헤드라인 모음</h1>
-      <div class="kw"><b>오늘의 키워드</b>선거 · 외교안보 · 지역사회 · 노동 · 언론 비교 · 팩트체크</div>
-    </div>
-
-    <div class="papers">
-      <div class="paper"><img alt="조선일보 뉴스스탠드 지면" src="newsstand-captures/clean/chosun.png"></div>
-      <div class="paper"><img alt="동아일보 뉴스스탠드 지면" src="newsstand-captures/clean/donga.png"></div>
-      <div class="paper"><img alt="한겨레 뉴스스탠드 지면" src="newsstand-captures/clean/hani.png"></div>
-      <div class="paper"><img alt="경향신문 뉴스스탠드 지면" src="newsstand-captures/clean/khan.png"></div>
-    </div>
-  </div>
+  <table class="screen">
+    <tr>
+      <td class="hdr" colspan="2">
+        <h1>2026년 5월 28일 헤드라인 모음</h1>
+        <span class="kw"><b>오늘의 키워드</b>선거 · 외교안보 · 지역사회 · 노동 · 언론 비교 · 팩트체크</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="cell"><img alt="조선일보 뉴스스탠드 지면" src="newsstand-captures/clean/chosun.png"></td>
+      <td class="cell"><img alt="동아일보 뉴스스탠드 지면" src="newsstand-captures/clean/donga.png"></td>
+    </tr>
+    <tr>
+      <td class="cell"><img alt="한겨레 뉴스스탠드 지면" src="newsstand-captures/clean/hani.png"></td>
+      <td class="cell"><img alt="경향신문 뉴스스탠드 지면" src="newsstand-captures/clean/khan.png"></td>
+    </tr>
+  </table>
 </body>
 </html>
