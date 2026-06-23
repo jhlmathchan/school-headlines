@@ -15,8 +15,12 @@
     td.hdr .kw b { background: #111; color: #f4f1ea; padding: 3px 11px; margin-right: 9px; font-size: 16px; }
     td.cell { width: 50%; height: 50%; text-align: center; vertical-align: top;
       background: #fff; border: 4px solid #f4f1ea; overflow: hidden; }
-    td.cell .plabel { background: #fff; border-bottom: 2px solid #111; text-align: left;
+    td.cell .plabel { background: #fff; border-bottom: 4px solid #111; text-align: left;
       padding: 5px 12px; white-space: nowrap; overflow: hidden; }
+    td.cell .plabel.p-chosun { background: #eef2f9; border-bottom-color: #15396b; }
+    td.cell .plabel.p-donga  { background: #e8f4f6; border-bottom-color: #0d6e7d; }
+    td.cell .plabel.p-hani   { background: #ecf6ee; border-bottom-color: #2e7d46; }
+    td.cell .plabel.p-khan   { background: #fbecef; border-bottom-color: #b32a3a; }
     td.cell .plabel img { height: 22px; width: auto; max-width: none; max-height: none;
       vertical-align: middle; border: 0; }
     td.cell .plabel .kname { font-size: 20px; font-weight: bold; color: #111;
@@ -35,12 +39,12 @@
       </td>
     </tr>
     <tr>
-      <td class="cell"><div class="plabel"><img src="logos/chosun.png" alt="조선일보"><span class="kname">조선일보</span><span class="ptime" data-p="chosun"></span></div><img alt="조선일보 뉴스스탠드 지면" src="newsstand-captures/clean/chosun.png"></td>
-      <td class="cell"><div class="plabel"><img src="logos/donga.png" alt="동아일보"><span class="ptime" data-p="donga"></span></div><img alt="동아일보 뉴스스탠드 지면" src="newsstand-captures/clean/donga.png"></td>
+      <td class="cell"><div class="plabel p-chosun"><img src="logos/chosun.png" alt="조선일보"><span class="kname">조선일보</span><span class="ptime" data-p="chosun"></span></div><img alt="조선일보 뉴스스탠드 지면" src="newsstand-captures/clean/chosun.png"></td>
+      <td class="cell"><div class="plabel p-donga"><img src="logos/donga.png" alt="동아일보"><span class="ptime" data-p="donga"></span></div><img alt="동아일보 뉴스스탠드 지면" src="newsstand-captures/clean/donga.png"></td>
     </tr>
     <tr>
-      <td class="cell"><div class="plabel"><img src="logos/hani.png" alt="한겨레"><span class="ptime" data-p="hani"></span></div><img alt="한겨레 뉴스스탠드 지면" src="newsstand-captures/clean/hani.png"></td>
-      <td class="cell"><div class="plabel"><img src="logos/khan.png" alt="경향신문"><span class="ptime" data-p="khan"></span></div><img alt="경향신문 뉴스스탠드 지면" src="newsstand-captures/clean/khan.png"></td>
+      <td class="cell"><div class="plabel p-hani"><img src="logos/hani.png" alt="한겨레"><span class="ptime" data-p="hani"></span></div><img alt="한겨레 뉴스스탠드 지면" src="newsstand-captures/clean/hani.png"></td>
+      <td class="cell"><div class="plabel p-khan"><img src="logos/khan.png" alt="경향신문"><span class="ptime" data-p="khan"></span></div><img alt="경향신문 뉴스스탠드 지면" src="newsstand-captures/clean/khan.png"></td>
     </tr>
   </table>
 </body>
