@@ -10,25 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     html, body { margin: 0; padding: 0; background: #2b2b2b; color: #1a1a1a; font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
-    .page { width: 98%; max-width: 1760px; margin: 8px auto; padding: 10px; background: #f4f1ea; border: 1px solid #1a1a1a; }
+    .page { width: 98%; max-width: 1100px; margin: 8px auto; padding: 10px; background: #f4f1ea; border: 1px solid #1a1a1a; }
     .header { border-bottom: 5px double #111; padding: 0 0 8px 0; margin-bottom: 8px; overflow: hidden; }
     h1 { float: left; margin: 0; font-family: "Noto Sans KR", sans-serif; font-size: 32px; line-height: 1.1; font-weight: 900; letter-spacing: -1px; color: #111; }
     .sub { float: right; margin-top: 8px; text-align: right; font-size: 12px; line-height: 1.35; font-weight: 500; color: #333; }
-    .guide { clear: both; border-top: 2px solid #111; border-bottom: 2px solid #111; margin-bottom: 8px; background: #fbf9f4; overflow: hidden; }
-    .guide-label { float: left; width: 120px; padding: 7px 0; background: #111; color: #f4f1ea; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
-    .guide-text { margin-left: 130px; padding: 7px 8px; font-size: 12px; line-height: 1.4; }
-    .tips { margin-bottom: 8px; overflow: hidden; }
-    .tip { float: left; width: 32.4%; min-height: 54px; margin-right: 1.4%; padding: 7px; border: 1px solid #888; background: #fbf9f4; font-size: 11px; line-height: 1.4; box-sizing: border-box; }
-    .tip-last { margin-right: 0; }
-    .tip b { display: block; margin-bottom: 3px; color: #111; font-size: 12px; font-weight: 700; border-bottom: 1px solid #ccc; padding-bottom: 2px; }
-    .papers { clear: both; overflow: hidden; }
-    .paper { float: left; width: 49.6%; margin: 0 0.8% 8px 0; border: 1px solid #111; background: #fff; box-sizing: border-box; }
-    .paper-right { margin-right: 0; }
+    .keywords { clear: both; border-top: 2px solid #111; border-bottom: 2px solid #111; margin-bottom: 12px; background: #fbf9f4; padding: 9px 10px; font-size: 14px; font-weight: 500; line-height: 1.5; }
+    .keywords b { display: inline-block; background: #111; color: #f4f1ea; padding: 3px 12px; margin-right: 10px; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+    .papers { clear: both; }
+    .paper { display: block; width: 100%; margin: 0 0 12px 0; border: 1px solid #111; background: #fff; box-sizing: border-box; }
     .paper img { display: block; width: 100%; height: auto; border: 0; background: #fff; }
-    .footer { clear: both; border-top: 3px double #111; padding-top: 8px; font-size: 11px; line-height: 1.4; color: #333; overflow: hidden; }
-    .activity { float: left; width: 32.4%; margin-right: 1.4%; padding: 7px; border: 1px solid #888; background: #fbf9f4; box-sizing: border-box; }
-    .activity-last { margin-right: 0; }
-    .activity b { display: block; margin-bottom: 3px; color: #111; font-size: 12px; font-weight: 700; border-bottom: 1px solid #ccc; padding-bottom: 2px; }
   </style>
 </head>
 <body>
@@ -38,28 +28,13 @@
       <div class="sub">조선일보 · 동아일보 · 한겨레 · 경향신문<br>오늘 아침, 네 개의 시선으로 읽기</div>
     </div>
 
-    <div class="guide">
-      <div class="guide-label">오늘 읽기</div>
-      <div class="guide-text">같은 하루도 신문마다 먼저 보여주는 장면이 다릅니다. 제목의 크기, 사진의 위치, 반복되는 단어를 비교해 보세요.</div>
-    </div>
-
-    <div class="tips">
-      <div class="tip"><b>관전 포인트</b>무엇을 1면에 올렸는가를 보면 언론사가 오늘 중요하게 본 문제를 읽을 수 있습니다.</div>
-      <div class="tip"><b>생각해볼 질문</b>네 신문이 공통으로 다룬 이슈는 무엇인가? 사진이 가장 크게 쓰인 기사는 왜 중요할까?</div>
-      <div class="tip tip-last"><b>오늘의 키워드</b>선거 · 외교안보 · 지역사회 · 노동 · 언론 비교 · 팩트체크</div>
-    </div>
+    <div class="keywords"><b>오늘의 키워드</b>선거 · 외교안보 · 지역사회 · 노동 · 언론 비교 · 팩트체크</div>
 
     <div class="papers">
       <div class="paper"><img alt="조선일보 뉴스스탠드 지면" src="newsstand-captures/clean/chosun.png"></div>
-      <div class="paper paper-right"><img alt="동아일보 뉴스스탠드 지면" src="newsstand-captures/clean/donga.png"></div>
+      <div class="paper"><img alt="동아일보 뉴스스탠드 지면" src="newsstand-captures/clean/donga.png"></div>
       <div class="paper"><img alt="한겨레 뉴스스탠드 지면" src="newsstand-captures/clean/hani.png"></div>
-      <div class="paper paper-right"><img alt="경향신문 뉴스스탠드 지면" src="newsstand-captures/clean/khan.png"></div>
-    </div>
-
-    <div class="footer">
-      <div class="activity"><b>1분 읽기</b>가장 큰 제목 하나를 고르고, 왜 1면에 왔는지 한 문장으로 말해보기.</div>
-      <div class="activity"><b>비교 읽기</b>같은 이슈를 다룬 신문 두 곳을 찾아 제목의 어휘가 어떻게 다른지 보기.</div>
-      <div class="activity activity-last"><b>확장 읽기</b>관심 있는 기사는 원문을 찾아 근거, 인용, 숫자가 충분한지 확인하기.</div>
+      <div class="paper"><img alt="경향신문 뉴스스탠드 지면" src="newsstand-captures/clean/khan.png"></div>
     </div>
   </div>
 </body>

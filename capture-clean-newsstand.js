@@ -49,6 +49,7 @@ async function capturePaper(page, paper) {
       await sharp(rawPath)
         .extract({ left: 1010, top: 435, width: 1800, height: 1080 })
         .resize({ width: 960 })
+        .extract({ left: 0, top: 124, width: 960, height: 452 })
         .png({ compressionLevel: 9, adaptiveFiltering: true })
         .toFile(path.join(finalDir, `${paper.name}.png`));
 
