@@ -34,6 +34,18 @@ async function updateHtmlTitle() {
   await fs.writeFile(htmlPath, updated);
 }
 
+async function updateHtmlTimes(times) {
+  let html = await fs.readFile(htmlPath, "utf8");
+  for (const [name, modified] of Object.entries(times)) {
+    const label = modified ? `${modified.split(" ").pop()} 편집` : "";
+    html = html.replace(
+      new RegExp(`(<span class="ptime" data-p="${name}">)[^<]*(</span>)`),
+      `$1${label}$2`
+    );
+  }
+  await fs.writeFile(htmlPath, html);
+}
+
 async function capturePaper(page, paper) {
   const url = `https://newsstand.naver.com/?list=&pcode=${paper.code}`;
 
@@ -53,7 +65,11 @@ async function capturePaper(page, paper) {
         .png({ compressionLevel: 9, adaptiveFiltering: true })
         .toFile(path.join(finalDir, `${paper.name}.png`));
 
-      return;
+      const content = await page.content();
+      const matched = content.match(
+        new RegExp(`"id":"${paper.code}"[^}]*?"modified":"([^"]+)"`)
+      );
+      return matched ? matched[1] : "";
     } catch (error) {
       console.log(`${paper.name} failed on attempt ${attempt}: ${error.message}`);
       if (attempt === 3) throw error;
@@ -79,11 +95,13 @@ async function main() {
     timezoneId: "Asia/Seoul",
   });
 
+  const times = {};
   for (const paper of papers) {
-    await capturePaper(page, paper);
+    times[paper.name] = await capturePaper(page, paper);
   }
 
   await browser.close();
+  await updateHtmlTimes(times);
 }
 
 main().catch((error) => {
